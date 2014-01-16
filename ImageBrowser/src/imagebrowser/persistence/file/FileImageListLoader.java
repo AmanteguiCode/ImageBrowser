@@ -23,7 +23,7 @@ public class FileImageListLoader extends ImageListLoader {
     }
 
     private List<Image> loadImages() {
-        List<Image> list = new ArrayList<>();
+        List<Image> list = new ArrayList<Image>();
         for (String file : new File(path).list())
             list.add(new ProxyImage(new FileImageLoader(path + "/" + file)));
         return list;

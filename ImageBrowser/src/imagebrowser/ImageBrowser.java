@@ -41,7 +41,7 @@ public class ImageBrowser {
     }
 
     private void createCommands() {
-        commandMap = new HashMap<>();
+        commandMap = new HashMap<String, ImageCommand>();
         commandMap.put("Next", new NextImageCommand(frame.getImageViewer()));
         commandMap.put("Prev", new PrevImageCommand(frame.getImageViewer()));
     }

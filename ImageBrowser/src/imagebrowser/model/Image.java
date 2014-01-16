@@ -1,14 +1,26 @@
 package imagebrowser.model;
 
-public interface Image {
+public abstract class Image {
 
-    public Image getNextImage();
+    private Image nextImage;
+    private Image prevImage;
 
-    public void setNextImage(Image image);
+    public abstract Bitmap getBitmap();
 
-    public Image getPrevImage();
+    public Image getNextImage() {
+        return nextImage;
+    }
 
-    public void setPrevImage(Image image);
+    public void setNextImage(Image nextImage) {
+        this.nextImage = nextImage;
+    }
 
-    public Bitmap getBitmap();
+    public Image getPrevImage() {
+        return prevImage;
+    }
+
+    public void setPrevImage(Image prevImage) {
+        this.prevImage = prevImage;
+    }
+
 }
